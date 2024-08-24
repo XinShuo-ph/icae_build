@@ -20,6 +20,16 @@ lora_config = LoraConfig(
     lora_alpha=32,
     lora_dropout=model_args.lora_dropout,
     bias="none",
+    target_modules=[
+    "q_proj",
+    "k_proj",
+    "v_proj",
+    "o_proj",
+    "gate_proj",
+    "up_proj",
+    "down_proj",
+    "lm_head",
+    ],
     task_type="CAUSAL_LM"
 )
 

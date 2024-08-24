@@ -129,6 +129,8 @@ class ICAE(torch.nn.Module):
         self.icae = get_peft_model(self.icae, lora_config)
         
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        print("loading to device:")
+        print(device)
 
         self.memory_token_embed = nn.Embedding(self.mem_size + 3, self.dim, padding_idx=None)
         self.loss_fct = nn.CrossEntropyLoss(ignore_index=-100)
