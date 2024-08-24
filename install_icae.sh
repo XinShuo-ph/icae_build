@@ -1,5 +1,5 @@
 cd ~
-git clone https://github.com/getao/icae.git
+git clone https://github.com/XinShuo-ph/icae_build.git
 cd icae/code/icae_v1/peft
 # install transformers version 4.36.2
 pip install transformers==4.36.2
